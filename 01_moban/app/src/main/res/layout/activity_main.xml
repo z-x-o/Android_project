@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="连接服务器"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:backgroundTint="@null"
+        android:background="@drawable/btn_selector1"
+        android:layout_marginTop="13dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/mqtt_information"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:textColor="#767474"
+        android:textStyle="bold"
+        android:hint="智联万物，共创未来"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text=""/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="esp8266灯光开关:"
+            android:layout_weight="3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="left"
+            />
+        <Switch
+            android:id="@+id/sw_led"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            />
+        <TextView
+            android:id="@+id/tv_led"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="已关闭"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#E85353"
+            />
+    </LinearLayout>
+    <!--  鸣笛  -->
+    <Button
+        android:id="@+id/btn_buzzer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="#B24141"
+        android:text="鸣笛"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <!-- 左电机 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="左轮"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            />
+        <SeekBar
+            android:id="@+id/left_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:max="100"
+            android:progress="0"/>
+        <TextView
+            android:id="@+id/left_text_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!--右轮-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="右轮"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            />
+        <SeekBar
+            android:id="@+id/right_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:max="100"
+            android:progress="0"/>
+        <TextView
+            android:id="@+id/right_text_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+<!--  下方几个按钮  -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:padding="30dp">
+
+        <!-- 上方按钮 -->
+        <Button
+            android:id="@+id/buttonTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#70F288"
+            android:padding="15dp"
+            android:text="前进"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <!-- 下方按钮 -->
+        <Button
+            android:id="@+id/buttonBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#70F288"
+            android:padding="15dp"
+            android:text="后退"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <!-- 左方按钮 -->
+        <Button
+            android:id="@+id/buttonLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#70F288"
+            android:padding="15dp"
+            android:text="左转"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <!-- 右方按钮 -->
+        <Button
+            android:id="@+id/buttonRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#70F288"
+            android:padding="15dp"
+            android:text="右转"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
