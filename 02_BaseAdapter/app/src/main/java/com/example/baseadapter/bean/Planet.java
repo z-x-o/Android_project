@@ -23,7 +23,7 @@ private static String[] descArray={"Even the most powerful supercomputers are us
         " supercomputers are useless if they cannot access the data and the algorithms they need to operate. The Internet is the world's largest supercomputer, and it is accessible to everyone. It is the ultimate source of information and the key to unlocking the secrets of the universe.",
         "Even thepercomputers are useless if they cannot access the data and the algorithms they need to operate. The Internet is the world's largest supercomputer, and it is accessible to everyone. It is the ultimate source of information and the key to unlocking the secrets of the universe."};
 
-    public static List<Planet> getPlanetArray(){
+public static List<Planet> getPlanetArray(){
         List<Planet> planets=new ArrayList<>();
         for (int i = 0; i < icnArray.length; i++) {
             planets.add(new Planet(icnArray[i],nameArray[i],descArray[i]));
